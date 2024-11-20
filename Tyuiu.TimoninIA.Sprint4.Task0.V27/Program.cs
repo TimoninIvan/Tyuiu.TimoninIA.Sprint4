@@ -1,5 +1,4 @@
 ﻿using Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib;
-using Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib;
 
 internal class Program
 {
