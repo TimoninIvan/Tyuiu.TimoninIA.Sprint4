@@ -1,19 +1,37 @@
 ﻿using Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib;
+using Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib;
 
-class Program
+internal class Program
 {
-    static void Main()
+    private static void Main(string[] args)
     {
-        int[] array = { 7, 4, 3, 2, 1, 5, 9, 8, 7, 4 };
-        int result = ArrayOperations.ProductOfOddElements(array);
+        DataService ds = new DataService();
 
-        if (result != 0)
+        Console.Title = "Спринт #4 | Выполнил: Тимонин И. А. | ИИПБ-24-1";
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* Спринт #4                                                               *");
+        Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
+        Console.WriteLine("* Задание #0                                                              *");
+        Console.WriteLine("* Вариант #27                                                             *");
+        Console.WriteLine("* Выполнил: Тимонин Иван Александрович  | ИИПБ24-1                    *");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* УСЛОВИЕ:                                                                *");
+        Console.WriteLine("* Дан одномерный целочисленный массив на 10 элементов заполненный         *");
+        Console.WriteLine("* статическими значениями в диапазоне от 0 до 9  подсчитать произведение  *");
+        Console.WriteLine("* нечетных элементов массива. {7 ,4 ,3 ,2 ,1 ,5 ,9 ,8 ,7 ,4}              *");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                         *");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("Исходный массив:");
+        int[] array = new int[] { 7, 4, 3, 2, 1, 5, 9, 8, 7, 4 };
+        foreach (int element in array)
         {
-            Console.WriteLine("Произведение нечетных элементов: " + result);
+            Console.WriteLine(element);
         }
-        else
-        {
-            Console.WriteLine("Нет нечетных элементов в массиве.");
-        }
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine($"Произведение нечётных элементов массива: {ds.GetMultOddArrEl(array)}");
+        Console.ReadKey();
     }
 }

@@ -1,24 +1,20 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
-namespace Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib;
 
-public static class ArrayOperations
+namespace Tyuiu.TimoninIA.Sprint4.Task0.V27.Lib
 {
-    public static int ProductOfOddElements(int[] array)
+    public class DataService : ISprint4Task0V27
     {
-        int product = 1;
-        bool hasOddElements = false;
-
-        foreach (int number in array)
+        public int GetMultOddArrEl(int[] array)
         {
-            if (number % 2 != 0) // проверка на нечетность
+            int res = 1;
+            foreach (int numbers in array)
             {
-                product *= number; // умножение
-                hasOddElements = true; // установка флага, что есть нечетные элементы
+                if (numbers % 2 == 1)
+                {
+                    res *= numbers;
+                }
             }
+            return res;
         }
-
-        if (!hasOddElements)
-            return 0; // если нет нечетных элементов, возвращаем 0 или можете использовать другое значение
-        return product; // возвращаем произведение нечетных элементов
     }
 }
